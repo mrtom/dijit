@@ -7,11 +7,12 @@
 	<title>Dijit Theme Tester</title>
 
 	<!-- required: a default theme -->
-	<link rel="stylesheet" href="../../dojo/resources/dojo.css">
-	<link rel="stylesheet" href="../../dijit/themes/claro/claro.css">
-	<link rel="stylesheet" href="../tests/css/dijitTests.css">
+	<link id="themeStyles" rel="stylesheet/less" href="../../dijit/themes/claro/claro.less">
 
 	<style type="text/css">
+		@import "../../dojo/resources/dojo.css";
+		@import "../tests/css/dijitTests.css";
+
 		html, body { height: 100%; width: 100%; padding: 0; border: 0; }
 		#main { height: 100%; width: 100%; border: 0; }
 		#header { margin: 0px; }
@@ -299,6 +300,7 @@
 		});
 		***/
 	</script>
+    <script src="less-1.0.35.js" type="text/javascript"></script>
 </head>
 <body class="claro">
 	<!-- basic preloader: -->
