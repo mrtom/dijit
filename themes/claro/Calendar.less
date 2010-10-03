@@ -33,12 +33,13 @@
  */
 
 // Import variables and mixins
-@import "mixins";
 @import "variables";
+@import "mixins";
 
 // Variables
-@calendarBoldBorderColor: #defaults[@boldBorderColor];
-@calendarColor: #defaults[@color];
+@calendarBoldBorderColor: @boldBorderColor;
+@calendarColor: @color;
+@calendarRadius: @radius;
 
 // CSS
 .claro {
@@ -50,7 +51,7 @@
 		background-repeat:repeat-x;
 		text-align:center;
 		padding:6px 5px 3px 5px;
-		.rounded_corners(#defaults[@radius]);
+		.roundedCorners(@calendarRadius);
 		
 		img {
 			border:none;

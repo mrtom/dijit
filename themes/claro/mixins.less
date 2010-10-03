@@ -1,5 +1,26 @@
-.rounded_corners (@radius: 5px) {
+/*
+ * TODO:
+ * Would be good to import the defaults from variables.less here, but it seems
+ * less can't handle that quite now
+ */
+
+/**
+ * @radius: Corner radius - default 4px
+ */
+.roundedCorners (@radius: 4px) {
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
   border-radius: @radius;
+}
+
+/**
+ * @hor: Horizontal offset - default 0px
+ * @ver: Vertical offset - default 1px
+ * @blur: Blur radius - default 5px
+ * @color: Shadow color - default 0.25 opacity black
+ */
+.boxShadow (@hor: 0px, @vert: 1px, @blur: 5px, @color: rgba(0,0,0,0.25)) {
+	box-shadow: @hor @vert @blur @color;
+	-webkit-box-shadow: @hor @vert @blur @color;
+	-moz-box-shadow: @hor @vert @blur @color;
 }
