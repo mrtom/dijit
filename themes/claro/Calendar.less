@@ -38,8 +38,12 @@
 
 // Variables
 @calendarBoldBorderColor: @boldBorderColor;
+@calendarContrastingBorderColor: @contrastingBorderColor;
+@calendarEmptyBackground: @emptyBackground;
 @calendarColor: @color;
 @calendarRadius: @radius;
+
+@calendarBorderWidth: @borderWidth;
 
 // CSS
 .claro {
@@ -126,7 +130,7 @@
 	}
 	.dijitCalendarDateTemplate {
 		text-align:center;
-		background-color:#fff;
+		background-color:@calendarEmptyBackground;
 		background-image:url("images/calendarContainerImages.png");
 		background-position:0px 0px;
 		background-repeat:repeat-x;
@@ -150,7 +154,7 @@
 		text-decoration:none;
 		display:block;
 		padding:3px 5px 3px 4px;
-		border:solid 1px #fff;
+		border:solid @calendarBorderWidth @calendarContrastingBorderColor;
 		color:#1e1e1e;
 		background-color:rgba(171,212,251,0);	/* transparent causes black-flash animation problem on webkit */
 		-webkit-transition-property:background-color, border;
@@ -215,7 +219,7 @@
 		background-image:url("images/calendarContainerImages.png");
 		background-position:0px -300px;
 		background-color:#75b5f0;
-		border:solid 1px #fff;
+		border:solid @calendarBorderWidth @calendarContrastingBorderColor;
 		-webkit-transition-duration:.1s;
 	}
 	
@@ -259,20 +263,20 @@
 
 	.dijitCalendarMonthMenu {
 		border-color: @calendarBoldBorderColor;
-		background-color: #fff;
+		background-color: @calendarEmptyBackground;
 		text-align:center;
 		background-image: none;
 
 		.dijitCalendarMonthLabel {
-			border-top: solid 1px #fff;
-			border-bottom: solid 1px #fff;
+			border-top: solid @calendarBorderWidth @calendarContrastingBorderColor;
+			border-bottom: solid solid @calendarBorderWidth @calendarContrastingBorderColor;
 			padding: 2px 0px;
 		}
 		
 		.dijitCalendarMonthLabelHover {
 			background-color: #abd6ff;
 			border-color: @calendarBoldBorderColor;
-			border-width:1px 0px;
+			border-width:@calendarBorderWidth 0px;
 			background-image: url("images/commonHighlight.png");
 			background-repeat:repeat-x;
 		}	
