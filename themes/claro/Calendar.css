@@ -180,7 +180,7 @@
 }
 .claro .dijitCalendarMonthMenu .dijitCalendarMonthLabel {
   border-top: solid 1px #ffffff;
-  border-bottom: solid solid 1px #ffffff;
+  border-bottom: solid 1px #ffffff;
   padding: 2px 0px;
 }
 .claro .dijitCalendarMonthMenu .dijitCalendarMonthLabelHover {
